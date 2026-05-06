@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /social-generator
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Perplexity-AI
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
+Sitemap: https://www.nejvyhodnejsipripojeni.cz/sitemap.xml
+Host: https://www.nejvyhodnejsipripojeni.cz
