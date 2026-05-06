@@ -41,7 +41,7 @@ export function PostHistory() {
       .order('created_at', { ascending: false })
       .limit(50);
 
-    if (!error && data) setPosts(data);
+    if (!error && data) setPosts(data as SavedPost[]);
     setLoading(false);
   };
 

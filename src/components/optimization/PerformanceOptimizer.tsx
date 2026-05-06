@@ -41,7 +41,7 @@ const PerformanceOptimizer = () => {
       
       gtagScript.onload = () => {
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) { window.dataLayer.push(args); }
+        function gtag(...args: any[]) { (window.dataLayer as any[]).push(args); }
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', 'G-3MCVWJPRBP');

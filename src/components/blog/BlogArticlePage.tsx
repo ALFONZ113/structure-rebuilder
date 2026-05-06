@@ -46,7 +46,7 @@ const BlogArticlePage: React.FC<BlogArticleProps> = ({
     if (React.isValidElement(contentElement)) {
       // Clone the element to preserve all props and children
       return React.cloneElement(contentElement, {}, 
-        React.Children.map(contentElement.props.children, (child, index) => {
+        React.Children.map((contentElement.props as { children?: React.ReactNode }).children, (child, index) => {
           // Add CTAs after every other h2 element
           if (React.isValidElement(child) && child.type === 'h2' && index % 2 === 1) {
             return (

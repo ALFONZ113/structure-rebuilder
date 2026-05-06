@@ -92,7 +92,7 @@ export const useSpeedTestCore = () => {
         console.log(`Warm-up completed: ${file.name}`);
       } catch (error) {
         console.log(`Warm-up failed: ${file.name}`, error);
-        if (error.name === 'AbortError') break;
+        if ((error as Error)?.name === 'AbortError') break;
       }
     }
     
@@ -257,7 +257,7 @@ export const useSpeedTestCore = () => {
         
       } catch (error) {
         console.log(`Consistency test ${i + 1} failed:`, error);
-        if (error.name === 'AbortError') break;
+        if ((error as Error)?.name === 'AbortError') break;
       }
     }
 
