@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
   const clickCountRef = useRef(0);
-  const clickTimerRef = useRef<ReturnType<typeof setTimeout>>();
+  const clickTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const handleCopyrightClick = useCallback(() => {
     clickCountRef.current += 1;

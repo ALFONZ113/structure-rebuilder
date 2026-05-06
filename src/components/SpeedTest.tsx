@@ -102,7 +102,7 @@ const SpeedTest = () => {
       console.log("=== ENHANCED SPEED TEST COMPLETE ===");
       
     } catch (error) {
-      if (error.name !== 'AbortError') {
+      if ((error as Error)?.name !== 'AbortError') {
         console.error('Speed test error:', error);
         setTestStatus('idle');
         setCurrentSpeed(0);
