@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { routes } from './routes/routes';
+import { routes } from './routes-config/routes';
 import AIChatWidget from './components/AIChatWidget';
 
 const queryClient = new QueryClient();
